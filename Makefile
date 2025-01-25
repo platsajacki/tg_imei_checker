@@ -18,8 +18,5 @@ tag:
 	git tag -a "$$tag_name" -m "$$tag_name" && git push origin "$$tag_name"
 
 run:
-	python scr/main.py
-
-test:
-	pytest --cov=src src/tests --blockage
+	python src/main.py
 
