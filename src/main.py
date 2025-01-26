@@ -30,6 +30,8 @@ async def imei_handler(message: Message) -> None:
     while len(response) > MAX_MESSAGE_LENGTH:
         await message.answer(response[:MAX_MESSAGE_LENGTH])
         response = response[MAX_MESSAGE_LENGTH:]
+    else:
+        await message.answer(response)
 
 
 async def main() -> None:
